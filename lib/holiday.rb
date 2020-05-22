@@ -27,20 +27,20 @@ def add_supply_to_winter_holidays(holiday_hash, item)
 end
 add_supply_to_winter_holidays(holiday_supplies, "Baloons")
 
-#Method 4: adds a supply to memorial day, adds a different supply to memorial day
+#Method 4: adds a supply to memorial day
 def add_supply_to_memorial_day(holiday_hash, supply)
   holiday_hash[:spring][:memorial_day].push(supply)
 end
 add_supply_to_memorial_day(holiday_supplies, "baloons")
 
-#Method 5:
+#Method 5: adds a different supply to memorial day
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
   holiday_hash[season][holiday_name] = supply_array
   holiday_hash
 end
 add_new_holiday_with_supplies(holiday_supplies, :fall, :succas, ["lulav", "esrog", "schach"])
 
-#Method 6:
+#Method 6: modifies the original hash by adding supplies of a new holiday to a season
 def add_new_season_and_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
   holiday_hash[season] = {holiday_name => supply_array} # the new echelon being created is to the left of the equals sign.
   holiday_hash
@@ -48,13 +48,13 @@ end
 mitzvos = ["seder", "matzah", "hagaddah"]
 add_new_season_and_holiday_with_supplies(holiday_supplies, :aviv, :pesach, mitzvos)
 
-#Method 7:
+#Method 7: has all the winter supplies
 def all_winter_holiday_supplies(holiday_hash)
   holiday_hash[:winter].values.flatten
 end
 all_winter_holiday_supplies(holiday_supplies)
 
-#Method 8:
+#Method 8: should output the formatted list of holidays and their supplies
 def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do | season, holiday|
      puts "#{season.capitalize}:"
