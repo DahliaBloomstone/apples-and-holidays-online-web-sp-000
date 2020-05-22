@@ -6,20 +6,20 @@ holiday_supplies = {
   :spring => {:memorial_day => ["BBQ"]}
 }
 
-#Method 1:
+#Method 1: returns the string 'BBQ' without hardcoding it
 def second_supply_for_fourth_of_july(holiday_supplies)
   holiday_supplies[:summer][:fourth_of_july][1]
 end
 second_supply_for_fourth_of_july(holiday_supplies)
 
-#Method 2:
+#Method 2: iterates through winter holidays adds a supply to each one
 def add_supply_to_winter_holidays(holiday_hash, item)
  holiday_hash[:winter].each do |holiday, decorations|
    decorations << item
   end
 end
 
-#Method 3:
+#Method 3:      iterates through winter holidays adds a supply to each one
 def add_supply_to_winter_holidays(holiday_hash, item)
  holiday_hash[:winter].each do |holiday, decorations|
    decorations.push(item)
@@ -65,7 +65,7 @@ def all_supplies_in_holidays(holiday_hash)
 end
 all_supplies_in_holidays(holiday_supplies)
 
-#Method 9: 
+#Method 9:
 def all_holidays_with_bbq(holiday_hash)
   holiday_hash.map do |season, holiday|
     holiday.map do |holiday, item|
