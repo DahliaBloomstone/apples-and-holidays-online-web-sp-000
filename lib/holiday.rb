@@ -47,16 +47,13 @@ def add_new_season_and_holiday_with_supplies(holiday_hash, season, holiday_name,
   holiday_hash[season] = {holiday_name => supply_array} # the new echelon being created is to the left of the equals sign.
   holiday_hash
 end
-
 mitzvos = ["seder", "matzah", "hagaddah"]
 add_new_season_and_holiday_with_supplies(holiday_supplies, :aviv, :pesach, mitzvos)
-
 
 def all_winter_holiday_supplies(holiday_hash)
   holiday_hash[:winter].values.flatten
 end
 all_winter_holiday_supplies(holiday_supplies)
-
 
 def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do | season, holiday|
