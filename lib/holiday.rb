@@ -6,7 +6,7 @@ holiday_supplies = {
   :spring => {:memorial_day => ["BBQ"]}
 }
 
-#Method 1: 
+#Method 1:
 def second_supply_for_fourth_of_july(holiday_supplies)
   holiday_supplies[:summer][:fourth_of_july][1]
 end
@@ -19,7 +19,7 @@ def add_supply_to_winter_holidays(holiday_hash, item)
   end
 end
 
-#Method 3:
+#Method 3: 
 def add_supply_to_winter_holidays(holiday_hash, item)
  holiday_hash[:winter].each do |holiday, decorations|
    decorations.push(item)
@@ -27,20 +27,20 @@ def add_supply_to_winter_holidays(holiday_hash, item)
 end
 add_supply_to_winter_holidays(holiday_supplies, "Baloons")
 
-#Method 4:
+#Method 4: 
 def add_supply_to_memorial_day(holiday_hash, supply)
   holiday_hash[:spring][:memorial_day].push(supply)
 end
 add_supply_to_memorial_day(holiday_supplies, "baloons")
 
-#Method 5:
+#Method 5: 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
   holiday_hash[season][holiday_name] = supply_array
   holiday_hash
 end
 add_new_holiday_with_supplies(holiday_supplies, :fall, :succas, ["lulav", "esrog", "schach"])
 
-#Method 6:
+#Method 6: 
 def add_new_season_and_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
   holiday_hash[season] = {holiday_name => supply_array} # the new echelon being created is to the left of the equals sign.
   holiday_hash
@@ -48,13 +48,13 @@ end
 mitzvos = ["seder", "matzah", "hagaddah"]
 add_new_season_and_holiday_with_supplies(holiday_supplies, :aviv, :pesach, mitzvos)
 
-#Method 7:
+#Method 7: 
 def all_winter_holiday_supplies(holiday_hash)
   holiday_hash[:winter].values.flatten
 end
 all_winter_holiday_supplies(holiday_supplies)
 
-#Method 8:
+#Method 8: 
 def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do | season, holiday|
      puts "#{season.capitalize}:"
@@ -65,7 +65,7 @@ def all_supplies_in_holidays(holiday_hash)
 end
 all_supplies_in_holidays(holiday_supplies)
 
-#Method 9:
+#Method 9: 
 def all_holidays_with_bbq(holiday_hash)
   holiday_hash.map do |season, holiday|
     holiday.map do |holiday, item|
