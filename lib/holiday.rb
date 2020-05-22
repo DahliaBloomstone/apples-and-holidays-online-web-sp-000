@@ -65,7 +65,7 @@ def all_supplies_in_holidays(holiday_hash)
 end
 all_supplies_in_holidays(holiday_supplies)
 
-#Method 9:
+#Method 9: should return :fourth_of_july and :memorial_day
 def all_holidays_with_bbq(holiday_hash)
   holiday_hash.map do |season, holiday|
     holiday.map do |holiday, item|
